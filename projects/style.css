@@ -1,0 +1,83 @@
+body {
+	background-color: #333;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 50px 20px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card {
+	background-color: #f2f2f2;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	text-align: center;
+	max-width: 400px;
+	margin: 0 20px 40px;
+	flex-basis: calc(33.33% - 200px);
+}
+
+.card img {
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.card h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.card p {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.card a {
+	display: inline-block;
+	padding: 10px 30px;
+	background-color: #333;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.2s;
+}
+
+.card a:hover {
+	background-color: #444;
+	color: #fff;
+}
+
+.home-button {
+	display: inline-block;
+	padding: 10px 30px;
+	background-color: #fff;
+	color: #333;
+	font-size: 18px;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.2s;
+}
+
+.home-button:hover {
+	background-color: #CBCBCB;
+	color: #333;
+}
