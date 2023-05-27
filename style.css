@@ -11,11 +11,10 @@ body {
     background-size: cover;
     background-position: center;
     position: absolute;
-    top: -5vw; /* Compensate for the increased dimensions */
-    left: -5vh; /* Compensate for the increased dimensions */
-    bottom: -5vw;
-    width: 110%; /* Increase the width by 10% */
-    height: 110%; /* Increase the height by 10% */
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
     transform: translate3d(0, 0, 0); /* Enable hardware acceleration for smoother performance */
     z-index: -1; /* Move the parallax layer below other elements */
     filter: blur(6px);

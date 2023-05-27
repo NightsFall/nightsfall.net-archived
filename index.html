@@ -18,12 +18,18 @@
   <script>
     const parallax = document.querySelector('.parallax');
 
-    window.addEventListener('resize', () => {
-      // Adjust the dimensions of the parallax container and layer on window resize
-      parallax.style.width = `calc(100% + ${window.innerWidth * 0.01}px)`;
-      parallax.style.height = `calc(100% + ${window.innerHeight * 0.01}px)`;
-    });
+    const setParallaxDimensions = () => {
+      // Set the dimensions of the parallax container and layer based on the current viewport size
+      const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+      const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
+      parallax.style.width = `${viewportWidth}px`;
+      parallax.style.height = `${viewportHeight}px`;
+    };
+
+    setParallaxDimensions(); // Set initial dimensions
+
+    window.addEventListener('resize', setParallaxDimensions);
 
     document.addEventListener('mousemove', (event) => {
       const mouseX = event.clientX;
