@@ -5,6 +5,16 @@ body {
 	font-family: Arial, sans-serif;
 }
 
+#parallax {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url(https://media.istockphoto.com/id/1277548951/photo/edith-lake-jasper-alberta-kanada-travel-destination.jpg?b=1&s=170667a&w=0&k=20&c=OgHDci7jKyrrVJAOJdmNKRW-Grw3Q1q8_lOaE3N-5mc=);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-position: 50% 50%;
+}
+
 .pfp {
     border-radius: 50%!important;
     width: 100%;
@@ -22,10 +32,16 @@ body {
 	background-color: #f2f2f2;
 	padding: 30px;
 	border-radius: 10px;
-	box-shadow: 0 0 50px rgba(0,0,0,0.3);
+	box-shadow: 0 0 25px rgba(0,0,0,0.3);
 	text-align: center;
 	max-width: 300px;
 	width: 100%;
+	transition: 0.7s;
+}
+
+.card:hover {
+    box-shadow: 0 0 75px rgba(0,0,0,0.3);
+    transition: 0.7s;
 }
 
 .card h1 {
@@ -52,3 +68,5 @@ body {
 .card a:hover {
 	background-color: #444;
 }
+
+
