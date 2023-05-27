@@ -4,18 +4,38 @@
 	<title>NightsFall</title>
 	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="parallax.js"></script>
 </head>
 <body>
-	<div id="parallax">
-		<div class="container">
-			<div class="card">
-				<img src="images/pfp.png" alt="NightsFall" class="pfp">
-				<h1>NightsFall</h1>
-				<p>Welcome to my portfolio! Here you can find examples of my work and learn more about my skills and experience.</p>
-				<a href="./projects">View my projects</a>
-			</div>
+    <div class="parallax"></div>
+	<div class="container">
+		<div class="card">
+			<img src="images/pfp.png" alt="NightsFall" class="pfp">
+			<h1>NightsFall</h1>
+			<p>Welcome to my portfolio! Here you can find examples of my work and learn more about my skills and experience.</p>
+			<a href="./projects">View my projects</a>
 		</div>
 	</div>
+  <script>
+    const parallax = document.querySelector('.parallax');
+
+    window.addEventListener('resize', () => {
+      // Adjust the dimensions of the parallax container and layer on window resize
+      parallax.style.width = `calc(100% + ${window.innerWidth * 0.01}px)`;
+      parallax.style.height = `calc(100% + ${window.innerHeight * 0.01}px)`;
+    });
+
+
+    document.addEventListener('mousemove', (event) => {
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+
+      // Calculate the new position for the parallax layer
+      const offsetX = -(mouseX / window.innerWidth - 0.5) * 30; // Adjust the multiplier for the desired parallax effect
+      const offsetY = -(mouseY / window.innerHeight - 0.5) * 30;
+
+      // Apply the new position using CSS transform
+      parallax.style.transform = `translate3d(${offsetX}px, ${offsetY}px, 0)`;
+    });
+  </script>
 </body>
 </html>
