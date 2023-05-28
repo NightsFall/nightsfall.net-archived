@@ -42,7 +42,7 @@ body {
 }
 
 .card:hover {
-	box-shadow: 0 0 75px rgba(0,0,0,0.3);
+	box-shadow: 0 0 100px rgba(0,0,0,0.3);
 	transition: 0.7s;
 }
 
@@ -61,7 +61,7 @@ body {
 .card a {
 	display: inline-block;
 	padding: 10px 30px;
-	background-color: #333;
+	background-color: rgba(0,0,0,0.4);
 	color: #fff;
 	font-size: 18px;
 	border-radius: 5px;
@@ -70,7 +70,7 @@ body {
 }
 
 .card a:hover {
-	background-color: #444;
+	background-color: rgba(0,0,0,0.5);
 }
 
 @media (max-width: 600px) {
