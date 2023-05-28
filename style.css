@@ -1,76 +1,134 @@
 body {
-	background-color: #000;
-	margin: 0;
-	padding: 0;
-	font-family: Arial, sans-serif;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
 .parallax {
-    background-image: url(https://media.istockphoto.com/id/1277548951/photo/edith-lake-jasper-alberta-kanada-travel-destination.jpg?b=1&s=170667a&w=0&k=20&c=OgHDci7jKyrrVJAOJdmNKRW-Grw3Q1q8_lOaE3N-5mc=); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: fixed;
-    transform: scale(1.2); /* Adjust the scale value as needed */
-    transform-origin: center center; /* Keep the scaling centered */
-    z-index: -1;
-    filter: blur(6px);
+  background-image: url(https://media.istockphoto.com/id/1277548951/photo/edith-lake-jasper-alberta-kanada-travel-destination.jpg?b=1&s=170667a&w=0&k=20&c=OgHDci7jKyrrVJAOJdmNKRW-Grw3Q1q8_lOaE3N-5mc=);
+  /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  transform: scale(1.2);
+  /* Adjust the scale value as needed */
+  transform-origin: center center;
+  /* Keep the scaling centered */
+  z-index: -1;
+  filter: blur(6px);
 }
 
 .pfp {
-	border-radius: 50% !important;
-	width: 100%;
-	max-width: 256px;
+  border-radius: 50% !important;
+  width: 100%;
+  max-width: 256px;
+}
+
+.projects_img {
+  width: 100%;
+  max-width: 256px;
 }
 
 .container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  flex-wrap: wrap;
 }
 
 .card {
-	background-color: rgba(0,0,0,0.4);
-	padding: 30px;
-	border-radius: 10px;
-	box-shadow: 0 0 30px rgba(0,0,0,0.3);
-	text-align: center;
-	max-width: 300px;
-	width: 100%;
-	transition: 0.7s;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  height: 520px;
+  transition: 0.7s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 20px;
 }
 
 .card:hover {
-	box-shadow: 0 0 100px rgba(0,0,0,0.3);
-	transition: 0.7s;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+  transition: 0.7s;
 }
 
 .card h1 {
-	font-size: 36px;
-	margin-bottom: 20px;
-	color: #fff;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 .card p {
-	font-size: 18px;
-	margin-bottom: 30px;
-	color: #fff;
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #fff;
 }
 
 .card a {
-	display: inline-block;
-	padding: 10px 30px;
-	background-color: rgba(0,0,0,0.4);
-	color: #fff;
-	font-size: 18px;
-	border-radius: 5px;
-	text-decoration: none;
-	transition: background-color 0.2s;
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s;
 }
 
 .card a:hover {
-	background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card:nth-child(2) {
+  transform: translate(-50%, -50%) translateX(-600px);
+}
+
+.card:nth-child(3) {
+  transform: translate(-50%, -50%) translateX(-200px);
+}
+
+.card:nth-child(4) {
+  transform: translate(-50%, -50%) translateX(200px);
+}
+
+.card:nth-child(5) {
+  transform: translate(-50%, -50%) translateX(600px);
+}
+
+.back-button {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s opacity 0.7s;
+  z-index: 10;
+}
+
+.back-button:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.7s
 }
 
 @media (max-width: 600px) {

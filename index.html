@@ -1,22 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>NightsFall</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <title>Project Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+    function showProjects() {
+      const homeCard = document.querySelector('.home-card');
+      const projectsCards = document.querySelectorAll('.projects-card');
+      const backButton = document.createElement('a');
+
+      homeCard.classList.add('hidden');
+      projectsCards.forEach((card) => {
+        card.classList.remove('hidden');
+      });
+
+      backButton.textContent = 'Go Back';
+      backButton.href = '#';
+      backButton.classList.add('back-button');
+      backButton.onclick = hideProjects;
+
+      document.body.appendChild(backButton);
+    }
+
+    function hideProjects() {
+      const homeCard = document.querySelector('.home-card');
+      const projectsCards = document.querySelectorAll('.projects-card');
+      const backButton = document.querySelector('.back-button');
+
+      projectsCards.forEach((card) => {
+        card.classList.add('hidden');
+      });
+      homeCard.classList.remove('hidden');
+
+      if (backButton) {
+        backButton.parentNode.removeChild(backButton);
+      }
+    }
+  </script>
 </head>
 <body>
-    <div class="parallax"></div>
+  <div class="parallax"></div>
 
-	<div class="container">
-		<div class="card">
-			<img src="images/pfp.png" alt="NightsFall" class="pfp">
-			<h1>NightsFall</h1>
-			<p>Welcome to my portfolio! Here you can find examples of my work and learn more about my skills and experience.</p>
-			<a href="./projects">View my projects</a>
-		</div>
-	</div>
+  <div class="container">
+    <div class="card home-card">
+      <img src="images/pfp.png" alt="NightsFall" class="pfp">
+      <h1>NightsFall</h1>
+      <p>Welcome to my portfolio! Here you can find examples of my work and learn more about my skills and experience.</p>
+      <a href="#" onclick="showProjects()">View my projects</a>
+    </div>
+
+    <div class="card projects-card hidden">
+      <img src="images/fireservers_logo.png" alt="FireServers" class="projects_img">
+      <h1>FireServers</h1>
+      <p>FireServers is a hosting company which provides free and paid hosting, it aims on the cheapest prices possible and provides VPS servers and any other server available.</p>
+      <a href="https://fireservers.net/" target="_blank">View FireServers</a>
+    </div>
+
+    <div class="card projects-card hidden">
+      <img src="images/nightsfalls_shop.png" alt="NightsFall's Shop" class="projects_img">
+      <h1>NightsFall's Shop</h1>
+      <p>NightsFall's Shop is a store where you buy all kinds of products such as discord bots, custom developmen.t</p>
+      <a href="https://shop.nightsfall.net/" target="_blank">View NightsFall's Shop</a>
+    </div>
+
+    <div class="card projects-card hidden">
+      <img src="https://market.ctrlpanel.gg/uploads/resources_icons/default.png" alt="Project 3" class="projects_img">
+      <h1>CtrlPanel.gg Market</h1>
+      <p>I've developed CtrlPanel.gg resources like the user suspend bot.</p>
+      <a href="./project3" target="_blank">View my CtrlPanel.gg Market Profiel</a>
+    </div>
+
+    <div class="card projects-card hidden">
+      <img src="images/slice.png" alt="Project 4" class="projects_img">
+      <h1>Slice Tab Mods</h1>
+      <p>Mods for the Slice New Tab which I've developed. The Slice New Tab had almost no personalization which is why I developed this. </p>
+      <a href="https://github.com/SliceTab/Mods" target="_blank">View Slice Tab Mods</a>
+    </div>
+  </div>
+
   <script>
     const parallax = document.querySelector('.parallax');
 
