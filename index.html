@@ -2,11 +2,13 @@
 <html>
 <head>
 	<title>NightsFall</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div class="parallax"></div>
+
 	<div class="container">
 		<div class="card">
 			<img src="images/pfp.png" alt="NightsFall" class="pfp">
@@ -25,6 +27,9 @@
 
       parallax.style.width = `${viewportWidth}px`;
       parallax.style.height = `${viewportHeight}px`;
+
+      const scaleFactor = viewportWidth <= 600 ? 1.0 : 1.2;
+      parallax.style.transform = `scale(${scaleFactor})`;
     };
 
     setParallaxDimensions(); // Set initial dimensions
@@ -40,7 +45,7 @@
       const offsetY = -(mouseY / window.innerHeight - 0.5) * 30;
 
       // Apply the new position using CSS transform
-      parallax.style.transform = `translate3d(${offsetX}px, ${offsetY}px, 0)`;
+      parallax.style.transform = `translate3d(${offsetX}px, ${offsetY}px, 0) scale(1.2)`;
     });
   </script>
 </body>

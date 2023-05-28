@@ -2,7 +2,6 @@ body {
 	background-color: #000;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 	font-family: Arial, sans-serif;
 }
 
@@ -10,20 +9,18 @@ body {
     background-image: url(https://media.istockphoto.com/id/1277548951/photo/edith-lake-jasper-alberta-kanada-travel-destination.jpg?b=1&s=170667a&w=0&k=20&c=OgHDci7jKyrrVJAOJdmNKRW-Grw3Q1q8_lOaE3N-5mc=); /* Replace with your image */
     background-size: cover;
     background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 110%;
-    height: 110%;
-    transform: translate3d(0, 0, 0); /* Enable hardware acceleration for smoother performance */
-    z-index: -1; /* Move the parallax layer below other elements */
+    background-repeat: no-repeat;
+    position: fixed;
+    transform: scale(1.2); /* Adjust the scale value as needed */
+    transform-origin: center center; /* Keep the scaling centered */
+    z-index: -1;
     filter: blur(6px);
 }
 
 .pfp {
-    border-radius: 50%!important;
-    width: 100%;
-    max-width: 256px;
+	border-radius: 50% !important;
+	width: 100%;
+	max-width: 256px;
 }
 
 .container {
@@ -45,8 +42,8 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 0 75px rgba(0,0,0,0.3);
-    transition: 0.7s;
+	box-shadow: 0 0 75px rgba(0,0,0,0.3);
+	transition: 0.7s;
 }
 
 .card h1 {
@@ -76,4 +73,8 @@ body {
 	background-color: #444;
 }
 
-
+@media (max-width: 600px) {
+  .card {
+    max-width: 100%;
+  }
+}
