@@ -21,13 +21,22 @@ body {
 
 .pfp {
   border-radius: 50% !important;
-  width: 100%;
-  max-width: 256px;
+  width: clamp(100px, calc(100px + (150 - 100) * ((100vw - 300px) / (1600 - 300))), 150px);
+  height: auto;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .projects_img {
-  width: 100%;
-  max-width: 256px;
+  border-radius: 50% !important;
+  width: clamp(100px, calc(100px + (150 - 100) * ((100vw - 300px) / (1600 - 300))), 150px);
+  height: auto;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
@@ -49,26 +58,26 @@ body {
   max-width: 300px;
   width: 100%;
   height: auto; /* Adjusted to allow variable content height */
-  transition: 0.7s;
+  transition: 1.5s;
   margin: 20px;
 }
 
 .card:hover,
 .projects-card:hover {
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
-  transition: 0.7s;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.6);
+  transition: 1.5s;
 }
 
 .card h1,
 .projects-card h1 {
-  font-size: 36px;
+  font-size: clamp(30px, calc(30px + (36 - 30) * ((100vw - 300px) / (1600 - 300))), 36px);
   margin-bottom: 20px;
   color: #fff;
 }
 
 .card p,
 .projects-card p {
-  font-size: 18px;
+  font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300))), 18px);
   margin-bottom: 30px;
   color: #fff;
 }
@@ -79,10 +88,10 @@ body {
   padding: 10px 30px;
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300))), 18px);
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.2s;
+  transition: background-color 0.7s;
 }
 
 .card a:hover,
